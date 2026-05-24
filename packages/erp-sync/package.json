@@ -1,0 +1,25 @@
+{
+  "name": "@flowprocure/erp-sync",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts",
+    "./worker": "./src/worker.ts"
+  },
+  "scripts": {
+    "worker": "tsx src/worker.ts",
+    "type-check": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@flowprocure/db": "workspace:*",
+    "pg-boss": "^10.1.4",
+    "drizzle-orm": "^0.38.3",
+    "zod": "^3.24.1"
+  },
+  "devDependencies": {
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2",
+    "@types/node": "^22.10.2"
+  }
+}
